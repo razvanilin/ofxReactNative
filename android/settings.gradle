@@ -1,0 +1,3 @@
+rootProject.name = 'SurgTracMobile'
+
+include ':app'
