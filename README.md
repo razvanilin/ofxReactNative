@@ -17,3 +17,25 @@ npm install
 ```
 
 Now open the project in Xcode and run it. The process should start the terminal to bundle the JS application and once both building and bundling process are done you should see the RN view from where you can switch to an OF view.
+
+## Renaming the project
+
+Follow this guide for the iOS native project: https://stackoverflow.com/questions/33370175/how-do-i-completely-rename-an-xcode-project-i-e-inclusive-of-folders
+
+To change the RN project name: (Make sure the react packager is not running in a terminal)
+
+* Change the name in `package.json`
+* change the name in `app.json`
+* change the component name in both `index.<os>.js`
+
+`AppRegistry.registerComponent('oFReactNative', () => App);`
+`AppRegistry.registerComponent('newAppName', () => App);`
+
+* change the name of the module in `AppDelegate.m`:
+
+```
+CTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"newAppName"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
+```
