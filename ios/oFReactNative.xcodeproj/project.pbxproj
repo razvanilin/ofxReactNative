@@ -49,9 +49,7 @@
 		492C45341F069E2C00830E18 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C45331F069E2C00830E18 /* CoreMedia.framework */; };
 		492C45361F069E3500830E18 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C45351F069E3500830E18 /* CoreVideo.framework */; };
 		492C45381F069E5200830E18 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C45371F069E5200830E18 /* MapKit.framework */; };
-		492C45611F06B66B00830E18 /* ofxiOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 492C455D1F06B66B00830E18 /* ofxiOS-Info.plist */; };
 		492C45621F06B66B00830E18 /* CoreOF.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 492C455E1F06B66B00830E18 /* CoreOF.xcconfig */; };
-		492C45641F06B66B00830E18 /* Project.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 492C45601F06B66B00830E18 /* Project.xcconfig */; };
 		492C46F61F06DB3700830E18 /* SquareApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 492C46F51F06DB3700830E18 /* SquareApp.mm */; };
 		492C46F71F06E27900830E18 /* libofxiOS_iphoneos_Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C45671F06B66B00830E18 /* libofxiOS_iphoneos_Debug.a */; };
 		492C46FB1F06EB5700830E18 /* SquareAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 492C46FA1F06EB5700830E18 /* SquareAppViewController.mm */; };
@@ -307,9 +305,7 @@
 		492C45391F069EB900830E18 /* libofxiOS_iphoneos_Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libofxiOS_iphoneos_Debug.a; path = ../../../../libs/openFrameworksCompiled/lib/ios/libofxiOS_iphoneos_Debug.a; sourceTree = "<group>"; };
 		492C454A1F06A78100830E18 /* ofxiOS_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxiOS_Prefix.pch; sourceTree = "<group>"; };
 		492C455A1F06B66B00830E18 /* iOS+OFLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "iOS+OFLib.xcodeproj"; path = "../../../../libs/openFrameworksCompiled/project/ios/iOS+OFLib.xcodeproj"; sourceTree = "<group>"; };
-		492C455D1F06B66B00830E18 /* ofxiOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ofxiOS-Info.plist"; path = "../../SurgTracMobile/ofxiOS-Info.plist"; sourceTree = "<group>"; };
 		492C455E1F06B66B00830E18 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../../libs/openFrameworksCompiled/project/ios/CoreOF.xcconfig; sourceTree = "<group>"; };
-		492C45601F06B66B00830E18 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = ../../SurgTracMobile/Project.xcconfig; sourceTree = "<group>"; };
 		492C46F41F06DB3700830E18 /* SquareApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareApp.h; sourceTree = "<group>"; };
 		492C46F51F06DB3700830E18 /* SquareApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SquareApp.mm; sourceTree = "<group>"; };
 		492C46F91F06EB5700830E18 /* SquareAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareAppViewController.h; sourceTree = "<group>"; };
@@ -525,9 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				492C455A1F06B66B00830E18 /* iOS+OFLib.xcodeproj */,
-				492C455D1F06B66B00830E18 /* ofxiOS-Info.plist */,
 				492C455E1F06B66B00830E18 /* CoreOF.xcconfig */,
-				492C45601F06B66B00830E18 /* Project.xcconfig */,
 				492C454A1F06A78100830E18 /* ofxiOS_Prefix.pch */,
 			);
 			name = openFrameworks;
@@ -994,8 +988,6 @@
 				492C45621F06B66B00830E18 /* CoreOF.xcconfig in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				492C45611F06B66B00830E18 /* ofxiOS-Info.plist in Resources */,
-				492C45641F06B66B00830E18 /* Project.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,6 +1223,7 @@
 				HEADER_TESS2 = "\"$(OF_PATH)/libs/tess2/include\"";
 				HEADER_UTF8 = "\"$(OF_PATH)/libs/utf8cpp/include\"";
 				INFOPLIST_FILE = "$(SRCROOT)/oFReactNative/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIB_BOOST = "$(LIB_BOOST_SYSTEM) $(LIB_BOOST_FS)";
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/ios/boost_filesystem.a\"";
@@ -1278,8 +1271,9 @@
 					../../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_video.a,
 					../../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_videostab.a,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razvanilin.oFReactNative;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razvanilin.ofxReactNative;
 				PRODUCT_NAME = oFReactNative;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1345,6 +1339,7 @@
 				HEADER_TESS2 = "\"$(OF_PATH)/libs/tess2/include\"";
 				HEADER_UTF8 = "\"$(OF_PATH)/libs/utf8cpp/include\"";
 				INFOPLIST_FILE = "$(SRCROOT)/oFReactNative/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIB_BOOST = "$(LIB_BOOST_SYSTEM) $(LIB_BOOST_FS)";
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/ios/boost_filesystem.a\"";
@@ -1392,8 +1387,9 @@
 					../../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_video.a,
 					../../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_videostab.a,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razvanilin.oFReactNative;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razvanilin.ofxReactNative;
 				PRODUCT_NAME = oFReactNative;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
