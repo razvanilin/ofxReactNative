@@ -5,7 +5,7 @@
 
 ## Set it up
 
-Download openFrameworks for iOS (this is made with v0.9.8): http://openframeworks.cc/versions/v0.9.8/of_v0.9.8_osx_release.zip
+Download openFrameworks for iOS (this is made with v0.9.8): http://openframeworks.cc/versions/v0.9.8/of_v0.9.8_ios_release.zip
 
 Make sure you have NodeJS and npm installed.
 
